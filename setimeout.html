@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- for 1st program -->
+    <p id="p1">This is just a simple paragraph that will be changing its color after some time</p>
+
+    <button id="btn">Click Me</button>
+    <br>
+    <br>
+    <br>
+
+
+
+    <script>
+        // For 1st program the js code will look like this:
+        const para = document.getElementById("p1");
+        const clickButton = document.getElementById("btn");
+
+
+        clickButton.addEventListener("click", changeColor);
+
+
+        function changeColor() {
+            setTimeout(()=>{
+                para.style.color = "purple"
+            }, 5000)
+        }
+
+        // For 2nd program the js code will look like this :
+        function countDown(number) {
+
+            console.log(number);
+               if (number > 1) {
+               setTimeout(() => {
+               countDown(number - 1);
+              }, 1000);
+               } else {
+              console.log("Countdown complete!");
+              }
+           }
+
+        countDown(3);
+        
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Interval Method</title>
+</head>
+<body>
+
+    <!-- For 1st program -->
+    <div id="div1">
+
+    </div>
+
+    <button id="btn">Click Me</button>
+    
+    <script>
+        // for 1st program js code will look like this:
+        let division = document.getElementById("div1");
+        let clickBtn = document.getElementById("btn");
+
+        clickBtn.addEventListener("click", writeSomething);
+
+        function writeSomething() {
+            setInterval(()=>{
+              division.textContent += " Mayank "
+            }, 2000)
+        }
+
+
+
+        //  For 2nd program js code will look like this
+        let count = 0;
+        
+        function incrementCount() {
+          count++;
+          console.log(count);
+
+         if (count >= 10) {
+           clearInterval(interval);
+          console.log("Stop Counting.");
+         }
+     }
+
+const interval = setInterval(incrementCount, 1000); 
+    </script>
+</body>
+</html>
